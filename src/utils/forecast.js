@@ -11,7 +11,7 @@ const forecast = (long, lat, callback) => {
         } else if (body.error) {
             callback('lat,lng tidak ditemukan , silahkan masukkan kordinat lain', undefined)
         } else {
-            callback(undefined,body.daily.data[0].summary + 'it is currently ' + body.currently.temperature + '.the is a ' + body.currently.precipProbability + '% chance of rain.')
+            callback(undefined,body.daily.data[0].summary + 'it is currently ' + body.currently.temperature + 'this high today '+ body.daily.data[0].temperatureHigh + ' with a low of  '+ body.daily.data[0].temperatureLow +' .there is a ' + body.currently.precipProbability + '% chance of rain.')
 
         }
     })
